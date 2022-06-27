@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+    Product
+{% endblock title %}
+{% block links %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/product_page.css" %}">
+{% endblock links %}
+{% block content %}
+    <!--product container-->
+    <div class="mid_container">
+        <!--product image container-->
+        <div class="table_container">
+            <table>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                {% for lst in orders %}
+                <tr>
+                {% for order in lst %}
+                            {% if forloop.first %}
+                            <td>{{ order.Bookingid }}</td>
+                            {% else %}
+                            <td>
+                                <a href="/product/{{ order.VehicleName }}">
+                                <div >
+                                    <img class="prdt_img_con"
+                                         alt="sample"
+                                         src="/{{ order.VehicleImg| cut:'showroom/' }}"
+                                         height="50px"
+                                         width="50px">
+                                </div>
+                            </a>    
+                            </td>
+                            <td>
+                                <a href="/product/{{ order.VehicleName }}"style="text-decoration:none;color:black;">
+                                    <div >
+                                {{ order.VehicleName }}
+                            </div>
+                        </td>
+                        <td>
+                        <a href="/product/{{ order.VehicleName }}" style="text-decoration:none;color:black;">
+                            <div >
+                                
+                                ${{ order.VehiclePrice }}
+                            </div>
+                        </td>
+                                
+                            {% endif %}
+                            
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock content %}

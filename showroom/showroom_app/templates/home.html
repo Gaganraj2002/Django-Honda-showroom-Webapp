@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock title %}
+{% block Script %}
+    <script></script>
+{% endblock Script %}
+{% block content %}
+    <div class="mid_container">
+        <div class="productRow">
+            <!-- Each product row contains info of 3 elements -->
+            {% for vehicle in product %}
+                <article class="productInfo">
+                    <!-- Each individual product description -->
+                    <a href="/product/{{ vehicle.VehicleName }}">
+                        <div >
+                            <img class="prdt_img_con"
+                                 alt="sample"
+                                 src="/{{ vehicle.VehicleImg| cut:'showroom/' }}"
+                                 height="100px"
+                                 width="100px">
+                        </div>
+                    </a>
+                    <p class="price">{{ vehicle.VehicleName }}</p>
+                    <p class="productContent">${{ vehicle.VehiclePrice }}</p>
+                    <a href="/product/{{ vehicle.VehicleName }}">
+                        <button type="submit" name="button" class="buyButton" id="buyButton">Buy</button>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

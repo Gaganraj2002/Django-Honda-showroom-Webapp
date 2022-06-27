@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_container {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_container {
+    width: 100px;
+    height: 20px;
+    margin-left: 2%;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 4%;
+}
+
+.nav>li {
+    list-style-type: none;
+}
+
+.nav>li>a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.nav>li>a:hover {
+    color: red;
+}
+
+.mid_container {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.product_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.details {
+    width: 90%;
+    height: 80%;
+    box-shadow: 1px 1px 10px gray;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product_name,
+.price {
+    width: auto;
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+    padding: 2vh 5vh;
+}
+
+.price_name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_description {
+    width: 90%;
+    height: auto;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+tr>td {
+    text-align: center;
+}
+
+table {
+    border: 1px solid gray;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.book_button {
+    width: 100%;
+    margin: 0px auto;
+    background-color: red;
+    color: white;
+    border: 0px;
+    height: 30px;
+}
+
+.book_button:hover {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}

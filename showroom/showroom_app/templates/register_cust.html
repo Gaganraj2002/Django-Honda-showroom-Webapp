@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    Customer Registration
+{% endblock title %}
+
+{% block content %}
+    <div class="mid_container">
+        <h1>Customer Registration</h1>
+<div class="form_div">
+
+        <form method="POST" action=".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="save" class="login_button">Register</button>
+        </form>
+            <p style="font-size:10px;margin-bottom:5px;">Already registered ?</p>
+            <a href="/login">
+                <button name="Login" class="login_button">Login</button>
+            </a>
+</div>
+</div>
+    {% endblock content %}

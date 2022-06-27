@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block content %}
+    <div class="mid_container">
+        
+        {% if details %}
+        <script>
+            setTimeout(function(){
+                window.location.href = '/';
+            }, 2000);
+        </script>
+        <h1>
+                    {{details}}
+                    
+                </h1>
+                <h4>
+                    <strong>Redirecting to home page.</strong>
+                </h4>
+        {% else %}
+        <div class="form_div">
+            <form method="POST" action="#">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="Login" class="login_button">Login</button>
+        </form>
+            <p style="font-size:10px;margin-bottom:5px;">Not yet registered ?</p>
+            <a href="/register-customer">
+                <button name="Reg" class="login_button">Register</button>
+            </a>
+        </div>
+    </div>
+        {% endif %}
+    {% endblock content %}

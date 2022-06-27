@@ -1,0 +1,97 @@
+{% load static %}
+{% static 'images' as ImageURL %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}Honda{% endblock %}
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href={% static "eCommerceAssets/styles/eCommerceStyle.css" %} rel="stylesheet" type="text/css">
+        <link href={% static "css/product_page.css" %} rel="stylesheet" type="text/css">
+        {% block links %}
+        {% endblock links %}
+        <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+        {% block Script %}
+        {% endblock Script %}
+        <script>var __adobewebfontsappname__ = "dreamweaver"</script>
+        <script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+        <script>
+        setTimeout(function() {
+            let height = 0;
+            let body = document.body;
+            let right_div = document.getElementById("rt_bar");
+            let side_div = document.getElementById("lt_bar");
+            height = right_div.offsetHeight + "px";
+            let hei = side_div.style.height = height + "px";
+            console.log(height)
+            console.log(hei)
+        }, 10);
+        </script>
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <header>
+                <div class="top_container">
+                    <div class="logo_container">
+                        <a href="/">
+                            <img src="{{ ImageURL }}/honda_logo.png"
+                                 alt="logo"
+                                 width="80%"
+                                 height="100%">
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <li class="list">
+                            <a href="#"><a href="/{{ login }}" title="Login">{{ login }}</a></a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                {% if login == "login" %}<a href="/register-customer/" title="Register">Register</a>{% endif %}
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </header>
+            <div id="content">
+                <section class="sidebar" id="lt_bar">
+                    <!-- This adds a sidebar with 1 searchbox,2 menusets, each with 4 links -->
+                    <div id="menubar">
+                        <nav class="menu">
+                            <h2>Account</h2>
+                            <hr>
+                            <ul>
+                                <!-- List of links under menuset 1 -->
+                                <li>
+                                    <a href="/orders" title="Link">Orders</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section class="mainContent" id="rt_bar">
+                    {% block content %}
+                    {% endblock content %}
+                </section>
+            </div>
+            <footer >
+                <!-- This is the footer with default 3 divs -->
+                <div style="width:100%;text-align:center;">
+                    <p>Some Info 2</p>
+                </div>
+                <div class="footerlinks">
+                    
+                        <a href="/contact" title="Link">Contact Us</a>
+                    
+                    
+                        <a href="/Service" title="Link">Service</a>
+                    
+                    
+                        <a href="/Feedback" title="Link">Feedback</a>
+                    
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

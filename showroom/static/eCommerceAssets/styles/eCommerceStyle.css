@@ -1,0 +1,398 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Global Styles */
+
+a:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+/*header*/
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(196, 4, 4);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/* Logo placeholder*/
+
+#logo {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 10%;
+    text-align: center;
+    color: rgba(255, 0, 0, 0);
+    background-color: rgb(229, 27, 47);
+}
+
+
+/* div for Links in header */
+
+#headerLinks {
+    float: left;
+    width: 85%;
+    text-align: right;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    padding-right: 20px;
+    background-color: rgb(229, 27, 47);
+}
+
+
+/* Links in header */
+
+#headerLinks a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-left: 66px;
+    font-size: 14px;
+}
+
+
+/* Offer text banner*/
+
+#offer {
+    font-family: 'Montserrat', sans-serif;
+    clear: both;
+    background-color: rgba(126, 23, 23, 0.445);
+    color: rgb(0, 0, 0);
+    padding-left: 115px;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+
+
+/* Main content of the site */
+
+#content {
+    display: flex;
+    clear: both;
+    overflow: auto;
+    padding-top: 29px;
+    padding-left: 3%;
+}
+
+
+/* Sidebar */
+
+#content .sidebar {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(146, 146, 146, 1.00);
+    float: left;
+    width: 20%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    background-color: rgba(246, 246, 246, 1.00);
+    padding-top: 36px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 3px;
+}
+
+
+/* main content of the site */
+
+#content .mainContent {
+    width: 70%;
+    text-align: center;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-bottom: 30px;
+}
+
+
+/*menubar's properties for menus in sidebar */
+
+#content .sidebar #menubar {
+    text-align: left;
+    color: rgba(146, 146, 146, 1.00);
+    position: relative;
+    left: 0%;
+}
+
+
+/* Search field in sidebar */
+
+#content .sidebar #search {
+    width: 100%;
+    border-radius: 0px;
+    height: 42px;
+    text-align: center;
+    color: rgba(208, 207, 207, 1.00);
+    font-size: 14px;
+    ;
+    margin-bottom: 21px;
+}
+
+
+/* Whole page content */
+
+#mainWrapper {
+    width: 100%;
+}
+
+
+/*menu elements */
+
+.menu ul li {
+    list-style-type: none;
+    font-size: x-large;
+    position: relative;
+    left: -35px;
+    padding-top: 12px;
+}
+
+
+/* Product rows for catalog */
+
+#content .mainContent .productRow {
+    overflow: auto;
+    color: rgba(146, 146, 146, 1.00);
+}
+
+
+/* Each product Information in the catalog */
+
+.productRow .productInfo {
+    float: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    width: 22%;
+}
+
+
+/* Prices of a products in catalog */
+
+.productRow .productInfo .price {
+    font-family: 'Anton', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    position: relative;
+    margin-top: 5px;
+    font-weight: 300;
+    top: -20px;
+}
+
+
+/* Content holder for products in catalog*/
+
+.productRow .productInfo .productContent {
+    position: relative;
+    top: -37px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-top: 5px;
+    color: rgb(238, 15, 15);
+}
+
+
+/* Buy button for products in catalog */
+
+.productRow .productInfo .buyButton {
+    position: relative;
+    top: -48px;
+    width: 84%;
+    background-color: rgba(235, 138, 138, 0.649);
+    height: 35px;
+    color: rgb(0, 0, 0);
+    border-style: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.productRow .productInfo .buyButton:hover {
+    position: relative;
+    top: -48px;
+    width: 84%;
+    background-color: rgb(254, 6, 6);
+    height: 35px;
+    color: rgb(255, 255, 255);
+    border-style: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/* footer */
+
+#mainWrapper footer {
+    clear: both;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    font-family: source-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.8;
+    padding-top: 22px;
+    padding-left: 22px;
+    text-align: center;
+    padding-bottom: 22px;
+    padding-right: 22px;
+}
+
+
+/*Each footer content */
+
+#mainWrapper footer div {
+    width: 27%;
+    float: left;
+    padding-left: 4%;
+    padding-right: 2%;
+    color: rgba(255, 255, 255, 1.00);
+    text-align: justify;
+}
+
+
+/* Links in footer */
+
+footer div a {
+    color: rgb(255, 255, 255);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlinks {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Product's images in catalog */
+
+.productInfo div img {
+    width: 100%;
+}
+
+
+/*Links in sidebar */
+
+.sidebar #menubar .menu ul li a {
+    color: rgba(146, 146, 146, 1.00);
+    text-decoration: none;
+}
+
+.sidebar #menubar .menu ul li a:hover {
+    color: rgba(107, 97, 97, 1.00);
+    text-decoration: none;
+}
+
+
+/* Menu headings in sidebar */
+
+#menubar .menu h2 {
+    font-size: 14px;
+}
+
+
+/*Links under menus in sidebar */
+
+#menubar .menu ul li a {
+    font-size: 14px;
+}
+
+
+/* Menus in sidebar */
+
+.sidebar #menubar .menu {
+    margin-bottom: 29px;
+}
+
+
+/* Container for links in footer */
+
+footer .footerlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prdt_img_con {
+    border-radius: 20px;
+}
+
+
+/* Media query for tablets */
+
+
+.form_div form p {
+
+    padding: 5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_div form p label {
+
+    padding: 5px;
+}
+
+.form_div form p input {
+
+    padding: 5px;
+}
+
+.form_div form p textarea {
+    width: 169px;
+}
+
+.login_button {
+    width: 70px;
+    height: 30px;
+    background-color: red;
+    border: 0px;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.login_button:hover {
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.table_container {
+    width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+th,
+td {
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+tr:hover {
+    background-color: coral;
+}

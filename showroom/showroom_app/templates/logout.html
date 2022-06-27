@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Logged out
+{% endblock title %}
+{% block content %}
+    <div class="mid_container">
+        <script>
+    setTimeout(function(){
+         window.location.href = '/';
+      }, 2000);
+        </script>
+        <h1>
+            <strong>You are logged out,</strong>
+        </h1>
+        <h4>
+            <strong>Redirecting to home page.</strong>
+        </h4>
+    </div>
+{% endblock content %}

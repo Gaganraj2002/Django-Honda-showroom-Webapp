@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+    Order {{ vehicle.VehicleName }}
+{% endblock title %}
+{% block links %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/product_page.css" %}">
+{% endblock links %}
+{% block content %}
+    <!--product container-->
+    <div class="mid_container">
+        <!--product image container-->
+        <div class="product_image">
+            <img class="prdt_img_con"
+                 src="/{{ vehicle.VehicleImg| cut:'showroom/' }}"
+                 alt="car"
+                 width="80%">
+        </div>
+        <!--product details container-->
+        <div class="details">
+            <!--product name-->
+            <div class="price_name">
+                <p class="product_name">{{ vehicle.VehicleName }}</p>
+                <p class="price">Price:${{ vehicle.VehiclePrice }}</p>
+            </div>
+            <h5 style="padding-left:5vh;font-size:1rem;color:red;">
+                {% if status %}
+                    Order Placed Successfully
+                {% else %}
+                    Order Not Placed
+                {% endif %}
+            </h5>
+            <p class="product_description">
+                {% if status %}
+                    order id:{{ order.Bookingid }}
+                    <br>
+                    this order will be delivered at {{ address }}
+                {% else %}
+                    Vehicle not in Stock
+                {% endif %}
+            </p>
+            <a href="/">
+                <button class="book_button">Done</button>
+            </a>
+        </div>
+    </div>
+{% endblock content %}
